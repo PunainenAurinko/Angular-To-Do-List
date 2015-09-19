@@ -24,7 +24,7 @@
         <ul>
             <li ng-repeat="task in tasks">
                 <input ng-model="task.done" type="checkbox" id="checkbox"><span ng-class="{'done':task.done}">{{task.title}}</span></li>
-            <input ng-click="deleteTask()" type="submit" value="Delete done tasks" id="button">
+            <input ng-click="clearDoneTasks()" type="submit" value="Delete done tasks" id="button">
         </ul>
     </div>
 

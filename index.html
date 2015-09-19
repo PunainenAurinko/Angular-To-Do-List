@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="todoList" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="//use.edgefonts.net/aclonica;advent-pro.js"></script>
+
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="todoListController as todoList">
+
+    <h1>{{name | uppercase}}</h1>
+    <hr>
+
+    <div>
+        <form ng-submit="addTask()" name="form">
+            <input ng-model="data.task" type="text" placeholder="Add a task here..." id="input" required>
+            <input type="submit" value="Add task" id="button">
+        </form>
+        <ul>
+            <li ng-repeat="task in tasks">
+                <input ng-model="task.done" type="checkbox" id="checkbox"><span ng-class="{'done':task.done}">{{task.title}}</span></li>
+            <input ng-click="deleteTask()" type="submit" value="Delete done tasks" id="button">
+        </ul>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

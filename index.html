@@ -19,14 +19,14 @@
     <div>
         <form ng-submit="addTask()" name="form">
             <input ng-model="newTask" type="text" placeholder="Add a task here..." id="input" required>
-            <input type="submit" value="Add task" id="button">
+            <input type="submit" value="Add task" class="button">
         </form>
         <form>
             <ul>
                 <li ng-repeat="task in tasks">
-                    <input ng-model="task.done" type="checkbox" id="checkbox"><span ng-class="{'done':task.done}">{{task.title}}</span>
+                    <input ng-model="task.done" type="checkbox" id="checkbox"><span ng-class="{'done':task.done}">{{task.title}}</span><input ng-click="deleteTask($index)" type="submit" value="X" class="button">
                 </li>
-                <input ng-click="clearDoneTasks()" type="submit" value="Delete done tasks" id="button">
+                <input ng-click="clearCompletedTasks()" type="submit" value="Clear completed tasks" class="button">
             </ul>
         </form>
     </div>

@@ -2,7 +2,7 @@ ng-disabled="form.$invalid"
 
 $scope.data = {};
 
-<input ng-click="deleteTask()" type="submit" value="Delete task" id="button">
+<input ng-click="deleteTask($index)" type="submit" value="Delete task" id="button">
 
 $scope.deleteTask = function () {
     $scope.tasks.splice({
@@ -10,3 +10,21 @@ $scope.deleteTask = function () {
         'done': false
     });
 }
+
+$scope.deleteTask = function (item) {
+    var index = $scope.tasks[$scope.currentShow].list.indexOf(item);
+    $scope.tasks[$scope.currentShow].list.splice(index, 1);
+};
+
+<button type="button" aria-hidden="true" ng-click="deleteTodo($index)">;&amp;times;</button>;
+
+<div class="list-group">;
+<a href="#" ng-repeat="todos in model" class="list-group-item" ng-class="{'active' : currentShow === $index}" ng-click="changeTodo($index)" >;
+<span class="badge">;{{todos.list.length}}</span>;
+{{todos.name}}
+</a>;
+</div>;
+
+<ul class="list-unstyled" ng-repeat="todos in model track by $index" ui-sortable="todoSortable" ng-model="todos.list" ng-show="$index === currentShow">
+<li class="todoTask" ng-repeat="todo in todos.list | filter:showFn | filter :todoSearch ">;
+</ul>

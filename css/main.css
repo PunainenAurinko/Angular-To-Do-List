@@ -434,7 +434,7 @@ h1 {
     text-align: center;
 }
 
-input, #button {
+input, .button {
     font-family: advent-pro, sans-serif;
     margin-left: 1.5rem;
     margin-top: 0.9rem;
@@ -443,7 +443,7 @@ input, #button {
     border-radius: 4px;
 }
 
-#button {
+.button {
     font-weight: 700;
     outline: none;
     border-style: none;
@@ -455,7 +455,7 @@ input, #button {
             box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
 }
 
-#button:hover {
+.button:hover {
     transition-duration: 0.3s;
     color: rgba(255, 255, 255, 0.8);
     background: #466f8a;

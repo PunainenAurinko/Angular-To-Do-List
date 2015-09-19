@@ -1,9 +1,13 @@
+// APP CONTROLLER
+
 var todoApp = angular.module('todoList', []);
 todoApp.controller('todoListController', ['$scope', function ($scope) {
 
     $scope.name = 'to-do list';
-
-    $scope.tasks = [
+        
+    // DEFAULT LIST ITEMS
+    
+    $scope.items = [
         {
             'title': 'Learn some stuff',
             'done': false
@@ -17,26 +21,31 @@ todoApp.controller('todoListController', ['$scope', function ($scope) {
             'done': false
         }
             ];
+    
+    // ADD ITEMS TO THE LIST
+    
+    $scope.addItem = function () {
 
-    $scope.addTask = function () {
-
-        $scope.tasks.push({
-            'title': $scope.newTask,
+        $scope.items.push({
+            'title': $scope.newItem,
             'done': false
         });
 
-        $scope.newTask = '';
+        $scope.newItem = '';
     }
 
-    $scope.clearCompletedTasks = function () {
-        $scope.tasks = $scope.tasks.filter(function (item) {
-            return !item.done;
+    // CLEAR COMPLETD ITEMS
+    
+    $scope.clearCompleted = function () {
+        $scope.items = $scope.items.filter(function (listItem) {
+            return !listItem.done;
         })
     }
 
-    $scope.deleteTask = function (item) {
-        var index = $scope.tasks.indexOf(item);
-        $scope.tasks.splice(index, 1);
+    // DELETE AN ITEM FROM THE LIST
+    
+    $scope.deleteItem = function (index) {
+        $scope.items.splice(index, 1);
     }
-
+    
 }]);

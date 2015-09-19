@@ -1,10 +1,12 @@
 ng-disabled="form.$invalid"
 
-<input ng-click="deleteTask()" type="submit" value="Delete task" id="button">
-
 $scope.data = {};
 
-                        
-$scope.deleteTask = function() {
-    $scope.tasks.splice($scope.data.task);
+<input ng-click="deleteTask()" type="submit" value="Delete task" id="button">
+
+$scope.deleteTask = function () {
+    $scope.tasks.splice({
+        'title': $scope.newTask,
+        'done': false
+    });
 }

@@ -528,6 +528,10 @@ form,
     margin: 2rem 6.5rem;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
 /*ADD IPAD MEDIA STYLES HERE*/
 
 @media only screen and (min-width: 960px) {

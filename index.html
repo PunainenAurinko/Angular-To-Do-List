@@ -22,7 +22,7 @@
             <input type="submit" value="Add task" class="button">
         </form>
         <form>
-            <ul>
+            <ul class="clearfix">
                 <li ng-repeat="item in items">
                     <input ng-model="item.done" type="checkbox" value="None" id="checkbox" name="check">
                     <span ng-class="{'done':item.done}">{{item.title}}</span>

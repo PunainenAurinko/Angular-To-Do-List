@@ -1,3 +1,12 @@
+//Codepen:
+//http://codepen.io/tonk0006/pen/JYKdeK
+
+//GitHub page:
+//http://tonk0006.github.io/Angular-To-Do-List/index.html
+
+//GitHub project files:
+//https://github.com/tonk0006/Angular-To-Do-List
+
 // APP CONTROLLER
 
 var todoApp = angular.module('todoList', []);

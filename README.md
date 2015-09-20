@@ -2,7 +2,7 @@
 
 *********************
 
-a simple AngularJS web app with a single view.
+A simple AngularJS web app with a single view.
 
 The single view has three parts: a header; a text input with button; and a list.
 

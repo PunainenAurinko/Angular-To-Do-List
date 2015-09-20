@@ -412,12 +412,8 @@ td,
 th {
     padding: 0;
 }
-
 /* END of Normalize.css
    ========================================================================== */
-
-
-
 /********************************************
                 MAIN STYLES
 ********************************************/
@@ -445,7 +441,8 @@ form {
     margin-top: 1.5rem;
 }
 
-input, .button {
+input,
+.button {
     font-family: advent-pro, sans-serif;
     margin-left: 1.5rem;
     margin-top: 0.9rem;
@@ -454,14 +451,15 @@ input, .button {
     border-radius: 4px;
 }
 
-input:hover, input:focus {
+input:hover,
+input:focus {
     transition-duration: 0.5s;
     //background: rgba(255, 255, 255, 0.6);
     border: 0.15rem solid #466f8a;
     outline: none;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
-       -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
-            box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+       -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 input[type="text"] {
@@ -475,9 +473,9 @@ input[type="text"] {
     color: #466f8a;
     background: rgba(255, 255, 255, 0.9);
     border: 0.1rem solid #466f8a;
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
-       -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
-            box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+       -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 .button:hover {
@@ -492,26 +490,25 @@ input[type="text"] {
 }
 
 li {
-    font-size: 20px;
-    color: #8a4682;
     list-style-type: none;
+    font-size: 20px;
     font-weight: 700;
-}
-
-#checkbox {
-    margin-left: 0;
-    margin-right: 3rem;
+    color: #8a4682;
 }
 
 input[type="checkbox"] {
     -webkit-appearance: none;
+    margin-left: 0;
+    margin-right: 3rem;
     width: 30px;
     height: 30px;
     background: white;
     border-radius: 5px;
 }
+
 input[type="checkbox"]:checked {
     /***Icon pack by Icons8 - https://icons8.com***/
+    
     background: url(https://maxcdn.icons8.com/Android_L/PNG/24/Very_Basic/checkmark-24.png);
     background-size: 100%;
 }
@@ -521,23 +518,32 @@ input[type="checkbox"]:checked {
     color: rgba(70, 111, 138, 0.5);
 }
 
+form,
 #clearCompletedDiv {
     border-top: 2px solid #8a4682;
 }
 
 #clearCompleted {
-    margin: 2.5rem 6rem;
+    margin: 2rem 6.5rem;
 }
 
 @media only screen and (min-width: 960px) {
-  
+    
+    input, .button {
+        margin-left: 3.7rem;
+    }
+    
     #list {
         max-width: 500px;
         margin: 0 auto;
     }
     
-    form {
-        margin-left: 4rem;
+    li {
+        margin-left: 3rem; 
+    }
+    
+    #clearCompleted {
+        margin: 2rem 10rem;
     }
     
 }

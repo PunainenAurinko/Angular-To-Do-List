@@ -12,11 +12,11 @@
 </head>
 
 <body ng-controller="todoListController as todoList">
-    <div id="header">
+    <section id="header">
         <h1>{{name | uppercase}}</h1>
-        <hr>
-    </div>
-    <div>
+        <!--        <hr>-->
+    </section>
+    <section id="list">
         <form ng-submit="addItem()" name="form">
             <input ng-model="newItem" type="text" placeholder="Add a task here..." id="input" required>
             <input type="submit" value="Add task" class="button">
@@ -24,13 +24,16 @@
         <form>
             <ul>
                 <li ng-repeat="item in items">
-                    <input ng-model="item.done" type="checkbox" id="checkbox"><span ng-class="{'done':item.done}">{{item.title}}</span>
-                    <input ng-click="deleteItem($index)" type="submit" value="X" class="button" id="delBtn">
+                    <input ng-model="item.done" type="checkbox" value="None" id="checkbox" name="check">
+                    <span ng-class="{'done':item.done}">{{item.title}}</span>
+                    <input ng-click="deleteItem($index)" type="submit" value="&#88;" class="button" id="delBtn">
                 </li>
-                <input ng-click="clearCompleted()" type="submit" value="Clear completed tasks" class="button">
             </ul>
+            <div id="clearCompletedDiv">
+                <input ng-click="clearCompleted()" type="submit" value="Clear completed tasks" class="button" id="clearCompleted">
+            </div>
         </form>
-    </div>
+    </section>
 
     <script src="js/main.js"></script>
 

@@ -445,7 +445,7 @@ input,
 .button {
     font-family: advent-pro, sans-serif;
     margin-left: 1.5rem;
-    margin-top: 0.9rem;
+    margin-top: 1rem;
     padding: 0.5rem 0.8rem;
     border: 0.15rem solid rgba(70, 111, 138, 0.5);
     border-radius: 4px;
@@ -485,6 +485,7 @@ input[type="text"] {
 }
 
 #delBtn {
+    float: right;
     margin-left: 17%;
     padding: 0.2rem 0.5rem;
 }
@@ -493,6 +494,7 @@ li {
     list-style-type: none;
     font-size: 20px;
     font-weight: 700;
+    padding-right: 2.5rem;
     color: #8a4682;
 }
 
@@ -508,7 +510,6 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
     /***Icon pack by Icons8 - https://icons8.com***/
-    
     background: url(https://maxcdn.icons8.com/Android_L/PNG/24/Very_Basic/checkmark-24.png);
     background-size: 100%;
 }
@@ -527,6 +528,8 @@ form,
     margin: 2rem 6.5rem;
 }
 
+/*ADD IPAD MEDIA STYLES HERE*/
+
 @media only screen and (min-width: 960px) {
     
     input, .button {
@@ -536,10 +539,6 @@ form,
     #list {
         max-width: 500px;
         margin: 0 auto;
-    }
-    
-    li {
-        margin-left: 3rem; 
     }
     
     #clearCompleted {

@@ -414,9 +414,17 @@ th {
 }
 /* END of Normalize.css
    ========================================================================== */
+
 /********************************************
                 MAIN STYLES
 ********************************************/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
     font-family: advent-pro, sans-serif;
@@ -486,6 +494,7 @@ input[type="text"] {
 
 #delBtn {
     float: right;
+    font-size: 16px;
     margin-left: 17%;
     padding: 0.2rem 0.5rem;
 }
